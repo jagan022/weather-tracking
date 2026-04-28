@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Past 5 Days Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>🌍 Weather Tracker</h2>
+    <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="live-weather.html">🌤 Live Weather</a></li>
+        <li><a href="history.html">📅 Past 5 Days</a></li>
+        <li><a href="about.html">ℹ About</a></li>
+    </ul>
+    <div id="dateTime" class="date-time"></div>
+</nav>
+
+<section class="hero">
+    <h1>📅 Past 5 Days Weather</h1>
+    <input type="text" id="historyCity" placeholder="Enter City Name">
+    <button onclick="getHistory()">📊 Fetch History</button>
+    <div id="historyResult"></div>
+</section>
+
+<div class="back-button-container">
+    <button onclick="goBack()" class="back-btn">
+        ← Back
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

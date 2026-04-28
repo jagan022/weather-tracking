@@ -1,0 +1,259 @@
+/* ============================= */
+/*        GLOBAL STYLES          */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #06b6d4);
+    color: white;
+}
+
+/* ============================= */
+/*         NAVIGATION BAR        */
+/* ============================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* ============================= */
+/*         HERO SECTION          */
+/* ============================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/*         INPUT FIELD           */
+/* ============================= */
+
+input {
+    width: 300px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    margin: 10px;
+}
+
+/* ============================= */
+/*         BUTTON STYLE          */
+/* ============================= */
+
+button,
+.btn {
+    background: linear-gradient(135deg, #facc15, #f97316);
+    color: #111827;
+    padding: 14px 26px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/*      WEATHER RESULT BOX       */
+/* ============================= */
+
+#weatherResult,
+#historyResult {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weatherResult h2,
+#historyResult h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+#weatherResult p,
+#historyResult p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* ============================= */
+/*        WEATHER CARDS          */
+/* ============================= */
+
+.weather-card {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.weather-card p {
+    margin: 8px 0;
+}
+
+/* ============================= */
+/*         ABOUT SECTION         */
+/* ============================= */
+
+.about-box {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    line-height: 1.8;
+}
+
+/* ============================= */
+/*      RESPONSIVE DESIGN        */
+/* ============================= */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .weather-card {
+        width: 90%;
+    }
+}
+
+/* ============================= */
+/*        DATE & TIME BOX        */
+/* ============================= */
+
+.date-time {
+    font-size: 15px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    min-width: 180px;
+}
+
+/* ============================= */
+/*   ELLIPSE BACK BUTTON STYLE   */
+/* ============================= */
+
+.back-button-container {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.back-btn {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #facc15, #f97316);
+    color: #111827;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .back-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
